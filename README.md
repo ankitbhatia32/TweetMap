@@ -2,15 +2,17 @@
 A simple web application which fetches tweets based on keywords with the help twitter streaming api and maps them onto Google Map using Elastic search and deploying the complete application on Elastic Beanstalk.
 These modules in particular involves the development of server to which request can be sent and it will reterive that request from Elastic search.
 
+Link to the web application is [here](http://node-express-env.tubfprgurk.us-east-1.elasticbeanstalk.com/)
+
 Technologies used:
 
 FrontEnd Development: HTML,CSS & Javascript
 
 BackEnd Development: Node.js
 
-Database: Amazon AWS Elastic Search
+Database: AWS Elastic Search
 
-Complete Deployment: Amazon AWS Elastic Beanstalk
+Complete Deployment: AWS Elastic Beanstalk
 
 Here is bascially complete connection of Backend and frontend part of the Tweet Map application. 
 
