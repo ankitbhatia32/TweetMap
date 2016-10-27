@@ -1,0 +1,16 @@
+{
+  "name": "Tweet-Map",
+  "version": "1.0.0",
+  "description": "Application that fetches tweets from twitter api and pushes them into aws elasticsearch domain",
+  "main": "server.js",
+  "dependencies": {
+    "elasticsearch": "^11.0.1",
+    "express": "^4.14.0",
+    "q": "^1.4.1",
+    "request": "*",
+    "twit": ">=1.1"
+  },
+  "scripts": {
+    "test": "node server.js"
+  },
+}
