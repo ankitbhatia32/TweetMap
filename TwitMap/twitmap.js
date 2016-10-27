@@ -9,7 +9,7 @@ var client = new Twitter({
     access_token: keys.storageConfig.TWITTER_access_token,
     access_token_secret: keys.storageConfig.TWITTER_access_token_secret
 });
-//Pushing tweets into elastic search.
+
 var topics = 'Arsenal,virat,kohli,football,trump,kim,kardashian,music,ManUtd,religion,food, ' +
     'movies,hilary,clinton,chelsea,africa,asia,europe,america,celebraties,disney,goal,GOT,WalkingDead_AMC,cricket,'+
     'president,debate,wwe,india,entertainment,faith,god,premierleague,LaLiga,ChampionsLeague,SerieA_TIM,election,apple'+
@@ -19,7 +19,7 @@ var topics = 'Arsenal,virat,kohli,football,trump,kim,kardashian,music,ManUtd,rel
 var stream = client.stream('statuses/filter', {track: topics}, {locations: ['-180','-90','180','90']});
 
     stream.on('tweet', function(tweet) {
-        if(tweet.geo != null) { // Insert into elastic search when tweet with location is found
+        if(tweet.geo != null) { 
             console.log("Tweet: "+tweet.text);
             request({
                 uri: 'https://search-elastic-search-bpdenwadbhpyremjbywkf2sklm.us-east-1.es.amazonaws.com/domain/twits',
