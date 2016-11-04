@@ -12,5 +12,5 @@ app.get('/', function (req, res) {
 });
 app.use(express.static(__dirname + '/Public'));
 
-require("./request.js")(app);
+require("./query.js")(app);
 server.listen(8081);
